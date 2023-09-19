@@ -10,8 +10,8 @@
             "email": "sunkangchina@163.com" 
         }
     ],
-    "require": {  
-        "aplus/cache": "^3.0"
+    "require": {
+        "sunkangchina/aplus_cache": "^3.0"
     },
     "autoload": { 
         "files": [ 

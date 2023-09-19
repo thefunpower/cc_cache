@@ -12,7 +12,8 @@ global $cache_drive,$cache_redis_config,$cache_file_dir,$cache_pre_key;
 $cache_drive = 'redis';
 $cache_redis_config = [
   'host'=>'127.0.0.1',
-  'port'=>6379
+  'port'=>6379,
+  'auth'=>''
 ];
 ~~~
 
