@@ -1,4 +1,9 @@
 <?php  
+/*
+    Copyright (c) 2023-2033, All rights reserved.
+    This is  a library, use is under MIT license.
+*/
+
 /**
 * 设置或获取缓存
 * global $cache_drive,$cache_redis_config,$cache_file_dir;
