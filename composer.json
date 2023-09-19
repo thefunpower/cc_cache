@@ -1,0 +1,21 @@
+{
+    "name": "thefunpower/cc_cache",
+    "type": "library",
+    "description": "cc_cache",
+    "keywords": ["php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ken.sun",
+            "email": "sunkangchina@163.com" 
+        }
+    ],
+    "require": {  
+        "aplus/cache": "^3.0"
+    },
+    "autoload": { 
+        "files": [ 
+            "./helper.php"
+        ]
+    }
+}
