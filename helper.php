@@ -1,9 +1,4 @@
 <?php  
-/*
-    Copyright (c) 2023-2033, All rights reserved.
-    This is  a library, use is under MIT license.
-*/
-
 /**
 * 设置或获取缓存
 * global $cache_drive,$cache_redis_config,$cache_file_dir;
@@ -26,15 +21,21 @@ function cc_cache($key,$val=null,$ttl=null){
                 'files_permission' => 0644,
             ]); 
         } 
+        
         if($cache_drive == 'redis'){
             $configs = [
-                'host'    => $redis_config['host']??'127.0.0.1',
-                'port'    => $redis_config['port']??'6379',
+                'host'    => $cache_redis_config['host']??'127.0.0.1',
+                'port'    => $cache_redis_config['port']??'6379',
                 'timeout' => 0.0,
-            ];
-            $cache = new Framework\Cache\RedisCache($configs);
+                'auth'    => $cache_redis_config['auth']
+            ];   
+            $cache = new Framework\Cache\RedisCache($configs); 
         }
     }  
+    if($val == null){
+        $cache->set($key,null);
+        return;
+    }
     if($val){
         if(is_array($val)){
             $val = json_encode($val,JSON_UNESCAPED_UNICODE);
