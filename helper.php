@@ -27,7 +27,8 @@ function cc_cache($key,$val=null,$ttl=null){
                 'host'    => $cache_redis_config['host']??'127.0.0.1',
                 'port'    => $cache_redis_config['port']??'6379',
                 'timeout' => 0.0,
-                'auth'    => $cache_redis_config['auth']
+                'password'=> $cache_redis_config['password'],
+                'database'=> $cache_redis_config['database'],
             ];   
             $cache = new Framework\Cache\RedisCache($configs); 
         }

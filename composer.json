@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "sunkangchina/aplus_cache": "^3.0"
+        "aplus/cache": "^3.1"
     },
     "autoload": { 
         "files": [ 
